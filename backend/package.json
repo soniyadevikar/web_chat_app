@@ -1,0 +1,24 @@
+{
+  "name": "hey-u",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon backend/server.js"
+  },
+  "author": "Soniya",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "google-auth-library": "^9.15.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^6.16.0",
+    "mongoose": "^7.1.0",
+    "nodemon": "^2.0.22",
+    "socket.io": "^4.8.1"
+  }
+}
