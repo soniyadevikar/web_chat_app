@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import { ChatState } from '../../Context/ChatProvider';
 import API from '../../config/axios';
 
@@ -25,7 +25,7 @@ const Signup = () => {
   const [loading, setLoading] = useState(false);
 
   const toast = useToast();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const { setUser } = ChatState();
 
   const handlePasswordClick = () => setShowPassword(!showPassword);
@@ -126,7 +126,7 @@ const Signup = () => {
       localStorage.setItem('userInfo', JSON.stringify(data));
       setUser(data);
       setLoading(false);
-      navigate('/chats'); 
+      navigate('/chats');
     } catch (error) {
       toast({
         title: 'Error Occurred!',
@@ -147,6 +147,7 @@ const Signup = () => {
         <Input
           placeholder="Enter Your Name"
           onChange={(e) => setName(e.target.value)}
+          color="white"
         />
       </FormControl>
 
@@ -155,6 +156,7 @@ const Signup = () => {
         <Input
           placeholder="Enter Your Email"
           onChange={(e) => setEmail(e.target.value)}
+          color="white"
         />
       </FormControl>
 
@@ -165,6 +167,7 @@ const Signup = () => {
             type={showPassword ? 'text' : 'password'}
             placeholder="Enter Your Password"
             onChange={(e) => setPassword(e.target.value)}
+            color="white"
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handlePasswordClick}>
@@ -181,6 +184,7 @@ const Signup = () => {
             type={showConfirmPassword ? 'text' : 'password'}
             placeholder="Confirm Password"
             onChange={(e) => setConfirmpassword(e.target.value)}
+            color="white"
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleConfirmPasswordClick}>
@@ -198,10 +202,10 @@ const Signup = () => {
           accept="image/*"
           onChange={(e) => postDetails(e.target.files[0])}
           sx={{
-            color: 'white', 
+            color: 'white',
             '&::file-selector-button': {
               background: 'white',
-             
+
             }
           }}
         />

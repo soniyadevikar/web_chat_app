@@ -86,6 +86,7 @@ const Login = () => {
           value={email}
           placeholder="Enter Your Email"
           onChange={(e) => setEmail(e.target.value)}
+          color="white"
         />
       </FormControl>
 
@@ -97,6 +98,7 @@ const Login = () => {
             placeholder="Enter Your Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            color="white"
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick}>
